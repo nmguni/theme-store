@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: "Welcome To Spartan Nutrition",
+  title: "Welcome to the Theme Store",
   description: "Lowest Prices Guaranteed",
-  keywords: "nutrition, diet plan, suplements",
+  keywords: "Themes, Development, UI/UX",
 };
 
 export default Meta;
