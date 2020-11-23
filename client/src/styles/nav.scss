@@ -1,0 +1,49 @@
+.navbar {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background-color: #607d8b;
+
+  .nav-link {
+    color: royalblue;
+  }
+
+  .nav__link__text {
+    color: #ced4da;
+    padding: 0 5px;
+  }
+}
+.navbar-dark .navbar-brand {
+  color: #fff9c4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  a {
+    font-weight: 900;
+  }
+}
+
+.navbar-collapse {
+  flex-grow: unset;
+
+  input {
+    border-radius: 5px;
+    margin-right: 2rem;
+    height: 30px;
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    i {
+      color: rgba(2, 2, 2, 0.62);
+      padding-left: 1rem;
+    }
+  }
+}
+
+.dropdown.nav-item {
+  a {
+    color: rgba(2, 2, 2, 0.62);
+  }
+}
