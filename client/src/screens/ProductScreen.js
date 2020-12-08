@@ -20,6 +20,8 @@ import {
 } from "../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
 
+import Img from "react-cool-img";
+
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(0);
   const [rating, setRating] = useState(0);
@@ -77,9 +79,20 @@ const ProductScreen = ({ history, match }) => {
       ) : (
         <>
           <Meta title={product.name} />
-          <Row>
+          <Row style={{ maxWidth: "1240px" }}>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              {" "}
+              <Img
+                style={{
+                  boxShadow:
+                    " 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  width: "550px",
+                }}
+                lazy={true}
+                src={product.image}
+                alt={product.name}
+                fluid
+              />
             </Col>
             <Col md={3}>
               <ListGroup variant="flush">

@@ -6,6 +6,8 @@ import Loader from "./Loader";
 import Message from "./Message";
 import { listTopProducts } from "../actions/productActions";
 
+import Img from "react-cool-img";
+
 import "../styles/carousel.scss";
 
 const ProductCarousel = () => {
@@ -27,7 +29,13 @@ const ProductCarousel = () => {
       {products.map((product) => (
         <Carousel.Item key={product._id}>
           <Link to={`/product/${product._id}`}>
-            <Image
+            <Img
+              style={{
+                backgroundColor: "#ECEFF1",
+                width: "480",
+                height: "320",
+              }}
+              lazy={true}
               className="carousel__image"
               src={product.image}
               alt={product.name}

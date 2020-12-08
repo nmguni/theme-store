@@ -6,6 +6,7 @@ import Message from "../components/Message";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { createOrder } from "../actions/orderActions";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
+import Img from "react-cool-img";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -84,14 +85,20 @@ const PlaceOrderScreen = ({ history }) => {
                   {cart.cartItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
-                        <Col md={1}>
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fluid
-                            rounded
-                          />
-                        </Col>
+                        <div
+                          style={{ backgroundColor: "#ccc", padding: "2rem" }}
+                        >
+                          <Col md={1}>
+                            <Img
+                              style={{ backgroundColor: "#607d8b59" }}
+                              lazy={true}
+                              src={item.image}
+                              alt={item.name}
+                              fluid
+                              rounded
+                            />
+                          </Col>
+                        </div>
                         <Col>
                           <Link to={`/product/${item.product}`}>
                             {item.name}
